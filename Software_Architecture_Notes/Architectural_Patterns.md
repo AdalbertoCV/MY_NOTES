@@ -10,6 +10,5 @@ Los patrones comprenden:
 - Solucion
 - Restricciones
 
-El libro mas famosos de patrones de software es Design Patterns: Elementos of resusable object-oriented Software por
+El libro mas famosos de patrones de software es Design Patterns: Elements of resusable object-oriented Software por
 Gamma, Helm, Johnson y Vlissides.
-
