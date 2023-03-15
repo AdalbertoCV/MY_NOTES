@@ -20,3 +20,14 @@
 # Estimar los recursos de las actividades
 
 - Identificar por quien seran realizadas las actividades.
+
+# Notas
+
+- El presupuesto y el tiempo total, deben considerarse con las estimaciónes con sus colchones,
+	sean o no utilizados en el producto.
+	
+- Un colchon es un tiempo agregado a una actividad que puede representar un riesgo en el proyecto.
+	Sifgnifica un aumento de costos y de tiempo.
+	
+- Lo mejor para realizar una estimación de tiempo es proporcionar un rango en lugar de un valor fijo.
+	Esto previene cualquier situación de atraso o adelanto.
