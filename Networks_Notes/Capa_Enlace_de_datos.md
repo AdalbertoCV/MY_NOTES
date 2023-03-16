@@ -72,15 +72,15 @@
 n = k + r
 n = 1001110 -> Trama
 
-dividor la codeword sobre el divisor
+dividor la codeword sobre el divisor:
 
-         1010
+            1010
         _____________
-   1011| 1001110
+   1011|1001110
          1011
 		  0101
 		  0000
 		   1011
 		   1011
 		    0000
-			 000
+			 000 -> Sindrome
