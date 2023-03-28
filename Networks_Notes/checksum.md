@@ -2,6 +2,8 @@
 
 Se parten los datos sacando bloques de 16 bits
 
+````
+
 11101101101101111010101010101010
 
 
@@ -50,5 +52,5 @@ Sumando los bloques
 1111111111111111
 				Complemento
 0000000000000000	-> Checksum
-			
 
+```
