@@ -87,3 +87,11 @@ dividor la codeword sobre el divisor:
 			 000 -> Sindrome
 			 
 ```
+
+# Dominio de colision
+
+Alcance de la red donde es posible que exista una colision
+
+# Dominio de broadcast
+
+Alcance de la red donde tenga cabida un mensaje lógico broadcast
