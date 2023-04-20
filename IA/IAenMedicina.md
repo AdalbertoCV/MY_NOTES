@@ -71,3 +71,8 @@ muchas aplicaciones, como imagenes medicas y automoviles autonomos, etc.
 
 Las tecnicas modernas de segmentacion de imagenes se basan en un enfoque de aprendizaje profundo que hace uso 
 de arquitecturas comunes como RNC, RCT y codificafores-decodificadores profundos.
+
+# Mascaras
+
+La salida producida por el modelo de segmentacion de imagenes se denomina mascara de la imagen.
+Se pueden representar asociando valores de pixeles con coordenadas.
