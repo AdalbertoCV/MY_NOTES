@@ -79,6 +79,71 @@ los cuales se encargan de enlazar directamente con el proveedor de servicios de 
 NAT: El enrutador actua como representante o intermediario de todas las computadoras de la red privada. Al realizar peticiones,
 se toma la IP del intermediario para la salida a internet.
 
+Calcular n y m en la mascara (bits de subred y host) tomando como base el ejemplo anterior
+
+m: 27 +1
+ad: 12 +1
+c: 24 +1
+j: 5 +1 
+rh: 1 +1
+
+5 dptos 
+
+2^n >= numero de subredes a crear  n=3
+2^m - 2 >= maximo de host de las redes (el que tenga mas computadoras conectadas) m=5
+
+C: 5 + 1
+
+192.168.0.96
+
+|sr|h| red|
+|----|----|-----|
+|011|00000| .96|
+|011|00001|  .97|
+|011|00010|  .98|
+|011|00100|  .99|
+|011|11110|  .126|
+|011|11111|  .127|
+
+gw = .97
+pcs = de .98 a .102
+
+
+J: 24+1
+
+192.168.0.128
+
+|sr|h| red|
+|----|----|-----|
+|100|00000| .128|
+|100|00001|  .129|
+|100|00010|  .130|
+|100|00100|  .131|
+|100|11110|  .158|
+|100|11111|  .159|
+
+gw = .129
+pcs = de .130 a .153
+
+RH: 1+1
+
+192.168.0.160
+
+|sr|h| red|
+|----|----|-----|
+|101|00000| .160|
+|101|00001|  .161|
+|101|00010|  .162|
+|101|00100|  .163|
+|101|11110|  .190|
+|101|11111|  .191|
+
+gw = .161
+pcs = .162
+
+
+
+
 # ------Actividad------ 
 
 
@@ -93,7 +158,125 @@ Máscara de subred: 255.255.252.0
 GW: 10.2.80.1
 DNS: uaz.edu.mx
 
+Red de casa:
+
+
 No es la mascara predeterminada, se ocupan 24 bits para red y 8 bits para host.
 
 
 2. Configurar en red dos computadoras en cable cruzado. Defina un esquema de red diferete al usado en clase.
+
+4. Diseñar un esquema de subredes en donde se tienen 5 cc en una escuela, con 33, 35, 21, 18 y 22 computadoras respectivamente.
+Crear diagrama y especificaciones del ISP
+
+![Diagrama de la red](/figuras/ejemplo1.png)
+
+2^n >= 5
+n = 3
+
+2^m - 2 >= 35
+m = 6
+
+se necesitan 16 bits de subred y host
+
+para la red se necesian
+
+16 bits de red, 8 bits de subred y 8 bits de host
+
+
+subred:
+
+0
+32
+64
+96
+128
+160
+192
+224
+
+host:
+
+0
+32
+64
+96
+128
+160
+192
+224
+
+subred cc 1 33
+
+172.160.32.0
+
+|subred|h|red|
+|----|----|----|
+|.32| 00000| .0| x
+|.32| 00001| .1|
+|.32| 11110| .30|
+|.32| 11111| .31|
+
+
+GW = 172.160.32.1
+pcs = de 172.160.32.2 a 172.160.32.34
+
+subred cc 2 35
+
+172.160.64.0
+
+|subred|h|red|
+|----|----|----|
+|.64| 00000| .0| x
+|.64| 00001| .1|
+|.64| 11110| .30|
+|.64| 11111| .31|
+
+
+GW = 172.160.64.1
+pcs = de 172.160.64.2 a 172.160.64.36
+
+subred cc 3 21
+
+172.160.96.0
+
+|subred|h|red|
+|----|----|----|
+|.96| 00000| .0| x
+|.96| 00001| .1|
+|.96| 11110| .30|
+|.96| 11111| .31|
+
+
+GW = 172.160.96.1
+pcs = de 172.160.96.2 a 172.160.96.22
+
+subred cc 4 18
+
+172.160.128.0
+
+|subred|h|red|
+|----|----|----|
+|.128| 00000| .0| x
+|.128| 00001| .1|
+|.128| 11110| .30|
+|.128| 11111| .31|
+
+
+GW = 172.160.128.1
+pcs = de 172.160.128.2 a 172.160.96.19
+
+subred cc 5 22
+
+172.160.160.0
+
+|subred|h|red|
+|----|----|----|
+|.160| 00000| .0| x
+|.160| 00001| .1|
+|.160| 11110| .30|
+|.160| 11111| .31|
+
+
+GW = 172.160.160.1
+pcs = de 172.160.160.2 a 172.160.160.23
