@@ -169,7 +169,7 @@ No es la mascara predeterminada, se ocupan 24 bits para red y 8 bits para host.
 4. Diseñar un esquema de subredes en donde se tienen 5 cc en una escuela, con 33, 35, 21, 18 y 22 computadoras respectivamente.
 Crear diagrama y especificaciones del ISP
 
-![Diagrama de la red](/figuras/ejemplo1.png)
+![Diagrama de la red](../figuras/ejemplo1.png)
 
 2^n >= 5
 n = 3
