@@ -115,6 +115,19 @@ Tiempo de transmision = 110MB / 10Mbps  = 110MB(1024 KB/ 1MB)(1024B/1KB)( 8 b/ 1
 Latencia = 33.3 seg + 92.27 seg = 125.6 seg = 2.09 minutos
 
 
+# 6.- Si tengo un archivo  de 9GB sobre una línea que proporciona una velocidad de 40Mbps, y tengo un RTT (Round trip time o RTD round trip delay)  de 500ms en un solo bit. Determine ¿cuántos bytes puedo enviar en el retardo de ida?, ¿en cuánto tiempo recibiré un ACK (asumiendo que se envía en un tamaño despreciable)?
+
+velocidad = 40000000 bps
+tamaño de archivo = 9gb
+RTT = 500ms
+
+Tiempo de ida = RTT/2 = 250ms
+
+cantidad de bytes ida = 9GB(1024 MB/1GB) x 0.25 s = 2304MB = 2.25 GB en el retardo de ida
+
+el ack se recibe en 0.5 segundos debido al RTT
+
+
 # 7.- Por el momento se están mandando 2000 tramas de 10kB por minuto. ¿Cuál es el throughput de la red si el ancho de banda es ideal es de 20Mbps?
 
 numero de tramas = 2000
@@ -144,9 +157,19 @@ Tiempo de transmision = 500MB / 40Mbps  = 500MB(1024 KB/ 1MB)(1024B/1KB)( 8 b/ 1
 Latencia = 66.6 seg + 104.9 seg = 171.5 seg = 2.86 minutos
 
 
+# 9.- Si tengo un archivo  de 21GB sobre una línea que proporciona una velocidad de 60Mbps, y tengo un RTT (Round trip time o RTD round trip delay) de 900 ms para un solo bit. Determine ¿cuántos bytes puedo enviar en el retardo de ida?. ¿en cuanto tiempo recibiré el último ACK (asumiendo que se envía en un tamaño despreciable)?
 
-# 10.- Si en este momento estoy mandando tramas de 1500 bytes a razón de 50000 por minuto. 
-¿En cuánto tiempo podría mandar un archivo de 22GB? ¿Qué significa este valor obtenido?
+tamaño de archivo = 21GB
+velocidad = 60Mbps
+RTT= 900ms
+
+Tiempo de ida = RTT/2 = 0.45 s
+
+cantidad de bytes ida = 21GB(1024 MB/1GB) x 0.45 s = 9676.8MB = 9.45 GB en el retardo de ida
+
+el ack se recibe en 0.9 segundos debido al RTT
+
+# 10.- Si en este momento estoy mandando tramas de 1500 bytes a razón de 50000 por minuto. ¿En cuánto tiempo podría mandar un archivo de 22GB? ¿Qué significa este valor obtenido?
 
 numero de tramas = 50000 
 tamaño de trama = 1500 B
@@ -165,9 +188,17 @@ BitRate (sin formula) =  20000 x 7 x 1s = 140000 b = 0.14 Mbps
 # 12.- Si en una línea de comunicación serial tenemos 96000 baudios, ¿qué tasa de transferencia se puede alcanzar sabiendo que el método de codificación usado tiene plasmado 1 bit por 2 elementos de señal? ¿Cuántos baudios necesitaría para alcanzar, en ese mismo enfoque de codificación, una tasa de transferencia de 10Mbps
 
 
-Br = 96000 x 1 x 2 = 192000 bps = 0.19 Mbps
+formula de relacion 
 
- 2 x 1 x baudios = 10000000 bps 
- 
-baudios = 10000000 bps / 2
-baudios = 5000000 baudios 
+S = N X e/r baud 
+
+r = 1
+e = 2
+N = ?
+S = 96000
+
+N (tasa de transferencia) = S / (e/r) = 96000 / 2 = 48000 bps
+
+para una N de 10Mbps
+
+S = 10000000 bps x 2 = 20000000 bauds
