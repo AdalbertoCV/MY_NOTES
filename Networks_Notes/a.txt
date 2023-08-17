@@ -1,0 +1,79 @@
+Se tiene la siguiente figura
+
+A --3--> B
+|        ^
+23       |
+|        |
+v        |
+C --2--> D
+
+NOTA: Asuma que es retardo la métrica.
+
+
+
+a.
+Destino Métrica Linea de Salida
+
+A            26         C
+
+B            0           B
+
+C            2           C
+
+D            31         A
+
+
+
+
+b.
+Destino Métrica Linea de Salida
+
+A            3           A
+
+B            0           B
+
+C            2           C
+
+D            7           C
+
+
+
+
+c.
+Destino Métrica Linea de Salida
+
+A            3           A
+
+B            0           B
+
+C            2           C
+
+D            31         A
+
+
+
+d.
+Destino Métrica Linea de Salida
+
+A            3           A
+
+B            0           B
+
+C            26        A
+
+D            31         A
+
+
+
+
+e.
+Destino Métrica Linea de Salida
+
+A            31         C
+
+B            0           B
+
+C            2           C
+
+D            7           C
+
